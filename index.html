@@ -490,7 +490,7 @@
     padding:0 32px;
   }
   .band .accent-script{
-    font-size:44px;
+    font-size:clamp(34px,9vw,44px);
     color:var(--gold);
     display:block;
     margin-bottom:18px;
@@ -646,6 +646,7 @@
   .tip b{display:block; font-size:15px; font-weight:600;}
   .tip span{color:rgba(255,255,255,0.75);}
   .chart-note{margin:0; font-size:14.5px; color:var(--ink-soft);}
+  .sr-only{position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;}
   .chart-table{margin-top:16px; font-size:14px;}
   .chart-table summary{cursor:pointer; color:var(--navy); font-weight:600; width:max-content;}
   .chart-table table{border-collapse:collapse; margin-top:12px; width:100%; max-width:360px;}
@@ -658,6 +659,9 @@
     .xl .ys{display:inline;}
   }
   @media (max-width:480px){
+    .hero-stats{gap:18px;}
+    .hero-stat b{font-size:24px;}
+    .hero-stat span{font-size:11px; letter-spacing:0.05em;}
     .chart-card{padding:26px 16px 22px;}
     .plot{height:220px; margin-left:36px;}
     .tick{left:-36px; width:30px;}
@@ -692,8 +696,8 @@
       <a href="#involved" class="btn btn-outline-light">Volunteer With Us</a>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat"><b>600</b><span>Families Served</span></div>
-      <div class="hero-stat"><b>20,000+</b><span>Lbs of Food</span></div>
+      <div class="hero-stat"><b>7,000+</b><span>Families Fed</span></div>
+      <div class="hero-stat"><b>200,000+</b><span>Lbs of Food</span></div>
       <div class="hero-stat"><b>2011</b><span>Giving Since</span></div>
     </div>
   </div>
@@ -705,7 +709,7 @@
 <section class="mission wrap" id="mission">
   <span class="eyebrow">Our Mission</span>
   <h2>We believe a holiday table is a place of dignity &mdash; <span class="accent-script">not a luxury.</span></h2>
-  <p>We work with local agencies throughout Jupiter and Palm Beach County to identify families in need. Every November, our neighbors, restaurant family, and local volunteers come together to source fresh produce and pantry staples in bulk and hand-pack them into grocery bags, turkey included. Families pick up their meals in person, partner agencies collect meals for the families they serve, and we deliver to those who can't make it. No paperwork, no lines &mdash; just a full bag and a "thank you," family to family.</p>
+  <p>We work with local agencies throughout Jupiter and Palm Beach County to identify families in need. Every November, our neighbors, restaurant family, and local volunteers come together to source fresh produce and pantry staples in bulk and hand-pack them into grocery bags, turkey included. Families pick up their meals in person, partner agencies collect meals for the families they serve, and we deliver to those who can't make it. Just a full Thanksgiving meal, handed over with dignity, family to family.</p>
   <p style="margin-top:18px; font-size:15.5px; color:var(--ink-soft);">Thanksgiving is our biggest drive of the year, but our mission is fighting food insecurity in our community year-round.</p>
 </section>
 
@@ -732,7 +736,7 @@
       <div class="step">
         <div class="num">03</div>
         <h3>We Pack</h3>
-        <p>Every bag is filled with a full Thanksgiving spread, from cranberry sauce to fresh corn, and labeled with care.</p>
+        <p>Every bag is filled with a full Thanksgiving spread, from cranberry sauce to fresh corn.</p>
       </div>
       <div class="step">
         <div class="num">04</div>
@@ -757,7 +761,7 @@
     <div class="bag"><div class="handle"></div><b>4</b><span>Restaurant Partners</span></div>
     <div class="bag"><div class="handle"></div><b>2,500+</b><span>People Fed</span></div>
   </div>
-  <p style="text-align:center; margin:44px auto 0; max-width:640px; font-family:'Fraunces', serif; font-size:clamp(20px,2.4vw,26px); line-height:1.35; color:var(--navy);">Since 2011, we have sent more than 7,000 families home with a Thanksgiving meal.</p>
+  <p style="text-align:center; margin:44px auto 0; max-width:640px; font-family:'Fraunces', serif; font-size:clamp(20px,2.4vw,26px); line-height:1.35; color:var(--navy);">Since 2011, we have sent more than 7,000 families home with a Thanksgiving meal, more than 200,000 pounds of food in all.</p>
   <div class="chart-card" id="families-chart">
     <h3>Families fed each year</h3>
     <p class="chart-sub">Thanksgiving meals sent home with local families, 2011 to 2026. This year is shown in rust.</p>
@@ -767,14 +771,11 @@
       <div class="tip" role="status" aria-live="polite" hidden><b></b><span></span></div>
     </div>
     <p class="chart-note">Our largest year was 2017 with 900 families, and we have held between 450 and 600 every year since 2020.</p>
-    <details class="chart-table">
-      <summary>View as a table</summary>
-      <table><caption>Families fed each Thanksgiving</caption>
+    <div class="sr-only"><table><caption>Families fed each Thanksgiving</caption>
         <thead><tr><th scope="col">Year</th><th scope="col">Families</th></tr></thead>
         <tbody><tr><td>2011</td><td>50</td></tr><tr><td>2012</td><td>100</td></tr><tr><td>2013</td><td>100</td></tr><tr><td>2014</td><td>100</td></tr><tr><td>2015</td><td>500</td></tr><tr><td>2016</td><td>625</td></tr><tr><td>2017</td><td>900</td></tr><tr><td>2018</td><td>700</td></tr><tr><td>2019</td><td>600</td></tr><tr><td>2020</td><td>500</td></tr><tr><td>2021</td><td>500</td></tr><tr><td>2022</td><td>500</td></tr><tr><td>2023</td><td>500</td></tr><tr><td>2024</td><td>500</td></tr><tr><td>2025</td><td>450</td></tr><tr><td>2026</td><td>600</td></tr></tbody>
         <tfoot><tr><th scope="row">Total</th><td>7,225</td></tr></tfoot>
-      </table>
-    </details>
+      </table></div>
   </div>
 </section>
 
@@ -832,9 +833,9 @@
 <section class="band">
   <img class="bg" src="images/AL9A5703.jpg" alt="">
   <div class="band-inner">
-    <span class="accent-script">&ldquo;Thank You&rdquo;</span>
-    <h2>Written by hand on every single bag we pack &mdash; because that's exactly what this is.</h2>
-    <p class="who">The Merciful Heavens Volunteer Team</p>
+    <span class="accent-script">From Family to Family</span>
+    <h2>Every year, neighbors, volunteers, and local partners come together so families in our community can sit down to a full Thanksgiving table.</h2>
+    <p class="who">Merciful Heavens &middot; Jupiter, Florida</p>
   </div>
 </section>
 
